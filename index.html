@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="cphAntmBVvxupyUmhdAj4oPEMDB-h-_PtM8knZZUGwk" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@200;400;700;1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.0/swiper-bundle.css"
+        integrity="sha512-dGydSZpRi9eEJoxwfHfT6BF7tNoma1GQbCIonlVR4IRfdcnjvJW6dcfS2uGlRdqPRryPzesROUSjR7VDKG4TeA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="video-container row">
+        <div id="stop" class="video-control" data-func="stopVideo"></div>
+        <iframe src="https://www.youtube.com/embed/aIXOyOLkb24?enablejsapi=1&html5=1" width="340" height="210"></iframe>
+    </div> -->
+    <div style="overflow: hidden;">
+        <section class="header">
+            <div class="logo font-large row second-logo">
+                <div data-i18n="tamkeen" style="display: inline-flex;">Tamkeen</div><span
+                    style="font-size: 20px;">!</span>
+            </div>
+            <div class="wrapper-header">
+                <div class="first-row row con">
+                    <div class="first-row-left row">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="logo font-large row">
+                            <div data-i18n="tamkeen">Tamkeen</div><span>!</span>
+                        </div>
+                        <div>
+                            <form action="/action_page.php">
+                                <input type="text" data-i18n="What_service_do_you_search"
+                                    placeholder="ما الخدمة التي تريد البحث عنها؟" name="search">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <ul class="row">
+                            <li><a href="./index.html" data-i18n="home">Home</a></li>
+                            <li><a href="./courses.html" data-i18n="courses">Courses</a></li>
+                            <li><a href="#" data-i18n="specialization">Specialization</a></li>
+                            <li><a href="#" data-i18n="about">about</a></li>
+                            <li><a href="#" data-i18n="contact">contact</a></li>
+
+                        </ul>
+                    </div>
+                    <div class=" first-row-right row">
+                        <div class="row">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <i class="fa-solid fa-location-dot" style="margin-inline-end: 5px;"></i>
+                                    <span class="sBtn-text" data-i18n="syria">Syria</span>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text" value="syria" data-i18n="syria">Syria</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text" value="america" data-i18n="america">America</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text" value="lebanon" data-i18n="lebanon">Lebanon</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text" value="UAE" data-i18n="UAE">UAE</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <i class="fa-solid fa-globe" style="margin-inline-end: 5px;"></i>
+                                    <span class="sBtn-text lan"></span>
+                                </div>
+                                <ul class="options">
+                                    <li class="option" id="engl">
+                                        <span class="option-text" value="en" data-i18n="english">English</span>
+                                    </li>
+                                    <li class="option" id="arabi">
+                                        <span class="option-text" value="ar" data-i18n="arabic">Arabic</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="./login.html" data-i18n="login">Login</a>
+                        </div>
+                        <div>
+                            <a href="#" class="btn-main" data-i18n="join">join</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="second-row con">
+                    <ul class="row">
+                        <li><a href="#" data-i18n="business">business</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                        <li><a href="#" data-i18n="video_animation">Video and animation</a></li>
+                        <li><a href="#" data-i18n="business">business</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                        <li><a href="#" data-i18n="video_animation">Video and animation</a></li>
+                        <li><a href="#" data-i18n="business">business</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                        <li><a href="#" data-i18n="video_animation">Video and animation</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-res">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section class="first-sec con">
+            <div class="circyl-header"></div>
+            <div id="ahmad" class="owl-carousel owl-theme">
+                <div class="owlll-slide row">
+                    <div class="column carocel-text">
+                        <h1 class="font-large" data-i18n="where_you_are_now">You are now in Tamkeen Society for Training
+                            and Scientific Rehabilitation</h1>
+                        <p data-i18n="what_are_you_fine_here">Here is your guide and find all the suppliers and
+                            importers you need for your business</p>
+                        <div class="btn-main"><a href="#" data-i18n="subscribe_us">Subscribe us</a></div>
+                    </div>
+                    <div id="vi" class="carocel-img">
+                        <img src="./IMG/social.png" alt="">
+                        <div class="up-video">
+                            <i class="fa-solid fa-play row"></i>
+                            <h1 data-i18n="click_here">Click here</h1>
+                            <p data-i18n="video_about_platform">Watch an introductory video about the platform</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="owlll-slide row">
+                    <div class="column carocel-text">
+                        <h1 class="font-large" data-i18n="where_you_are_now">You are now in Tamkeen Society for Training
+                            and Scientific Rehabilitation</h1>
+                        <p data-i18n="what_are_you_fine_here">Here is your guide and find all the suppliers and
+                            importers you need for your business</p>
+                        <div class="btn-main"><a href="#" data-i18n="subscribe_us">Subscribe us</a></div>
+                    </div>
+                    <div id="vi2" class="carocel-img">
+                        <img src="./IMG/social.png" alt="">
+                        <div class="up-video">
+                            <i class="fa-solid fa-play row"></i>
+                            <h1 data-i18n="click_here">Click here</h1>
+                            <p data-i18n="video_about_platform">Watch an introductory video about the platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="what-search column">
+                <div class="font-large" data-i18n="what_are_you_looking_for">What are you looking for?</div>
+                <div class="places row">
+                    <div>
+                        <img src="./IMG/Wholesaler.jpg" alt="">
+                        <div class="layer-up-places">
+                            <h1 data-i18n="wholesaler">Wholesaler</h1>
+                            <p data-i18n="lorem_short">There is a long-established fact that the readable content of a
+                                page will not be distracting</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./IMG/factory.jpg" alt="">
+                        <div class="layer-up-places">
+                            <h1 data-i18n="factory">Factory</h1>
+                            <p data-i18n="lorem_short">There is a long-established fact that the readable content of a
+                                page will not be distracting</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./IMG/imported.jpg" alt="">
+                        <div class="layer-up-places">
+                            <h1 data-i18n="imported">imported</h1>
+                            <p data-i18n="lorem_short">There is a long-established fact that the readable content of a
+                                page will not be distracting</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./IMG/Supplier.png" alt="">
+                        <div class="layer-up-places">
+                            <h1 data-i18n="supplier">supplier</h1>
+                            <p data-i18n="lorem_short">There is a long-established fact that the readable content of a
+                                page will not be distracting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-card row">
+                <div class="column">
+                    <div data-i18n="country">country</div>
+                    <div class="select-menu middle-select">
+                        <div class="select-btn">
+                            <i class="fa-solid fa-location-dot" style="margin-inline-end: 5px;"></i>
+                            <span class="sBtn-text" data-i18n="syria">Syria</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text" value="syria" data-i18n="syria">Syria</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text" value="america" data-i18n="america">America</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text" value="lebanon" data-i18n="lebanon">Lebanon</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text" value="UAE" data-i18n="UAE">UAE</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text" value="UAE" data-i18n="UAE">UAE</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div data-i18n="city">City</div>
+                    <div class="select-menu middle-select">
+                        <div class="select-btn">
+                            <i class="fa-solid fa-location-dot" style="margin-inline-end: 5px;"></i>
+                            <span class="sBtn-text" data-i18n="damascus">Damascus</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text" value="damascus" data-i18n="damascus">Damascus</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text" value="aleppo" data-i18n="aleppo">Aleppo</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text" value="dubai" data-i18n="dubai">Dubai</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="line-vertical"></span>
+                <div class="column">
+                    <div data-i18n="specialization_name">Specialization Name</div>
+                    <div class="select-menu middle-select">
+                        <div class="select-btn">
+                            <i class="fa-solid fa-gear" style="margin-inline-end: 5px;"></i>
+                            <span class="sBtn-text" data-i18n="it">Information Technology</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text" value="it" data-i18n="it">Information Technology</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div data-i18n="field_activity">Field of activity</div>
+                    <div class="select-menu middle-select">
+                        <div class="select-btn">
+                            <i class="fa-solid fa-gear" style="margin-inline-end: 5px;"></i>
+                            <span class="sBtn-text" data-i18n="factory">Factory</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text" value="factory" data-i18n="factory">Factory</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-main">
+                    <button data-i18n="search">Search</button>
+                </div>
+            </div>
+        </section>
+        <section class="about-tamken row con">
+            <div class="column">
+                <h1 class="font-large" data-i18n="About_Tamkeen">About Tamkeen Training Platform</h1>
+                <p data-i18n="lorem_long">There is a long-established fact that the readable content of a page is a
+                    long-established fact that the readable content of a page will not distract the reader from focusing
+                    on appearance. The page is being read. So the Lorem Ipsum method is used because it gives a normal
+                    distribution - to some extent There is a long-established fact that the readable content of the page
+                    There is a long-established fact that the readable content of the page will not distract the reader
+                    from focusing on the form External text or paragraphs are placed form on the page being read.
+                    Therefore the Lorem Ipsum method is used as it gives a more or less normal distribution</p>
+                <div class="row">
+                    <div class="btn-main">
+                        <a href="#" data-i18n="read_more">Read more</a>
+                    </div>
+
+                    <a href="#"><i class="fa-solid fa-play row"></i></a>
+                    <div data-i18n="video_about_platform">Watch an introductory video about the platform</div>
+                </div>
+            </div>
+            <div class="about-tamken-img row">
+                <div>
+                    <img src="./IMG/Open.jpg" alt="">
+                </div>
+                <div>
+                    <img src="./IMG/Chess.png" alt="">
+                </div>
+                <div>
+                    <img src="./IMG/MBA.jpg" alt="">
+                </div>
+                <div class="box-yallo row">
+                    <div class="row"><i class="fa-solid fa-star"></i></div>
+                    <div class="row" data-i18n="Documented_information">Documented information</div>
+                </div>
+                <div class="box-red row">
+                    <div class="row"><i class="fa-solid fa-user"></i></div>
+                    <div class="row" data-i18n="large_partners">A large number of partners</div>
+                </div>
+                <div class="img-dots">
+                    <img src="./IMG/dots.svg" alt="">
+                </div>
+                <div class="circyl">
+
+                </div>
+            </div>
+        </section>
+        <section class="active30 row con">
+            <div class="column">
+                <div><i class="fa-solid fa-icons row"></i></div>
+                <div class="font-large">30+</div>
+                <div class="row" data-i18n="factory">Factory</div>
+            </div>
+            <div class="column">
+                <div><i class="fa-solid fa-icons row"></i></div>
+                <div class="font-large">30+</div>
+                <div class="row" data-i18n="factory">Factory</div>
+            </div>
+            <div class="column">
+                <div><i class="fa-solid fa-icons row"></i></div>
+                <div class="font-large">30+</div>
+                <div class="row" data-i18n="factory">Factory</div>
+            </div>
+            <div class="column">
+                <div><i class="fa-solid fa-icons row"></i></div>
+                <div class="font-large">30+</div>
+                <div class="row" data-i18n="factory">Factory</div>
+            </div>
+        </section>
+        <section class="services column con">
+            <div>
+                <div data-i18n="you_choose">You choose</div>
+                <div class="font-large" data-i18n="What_services_offer">What services do we offer you?</div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div><img src="./IMG/earning.png" alt=""></div>
+                    <h2 data-i18n="start_earning">Start Earning</h2>
+                    <div data-i18n="lorem_short">There is a long-established fact that the readable content of a page
+                        will not be distracting</div>
+                </div>
+                <i class="fa-solid fa-arrow-left-long"></i>
+
+                <div class="column">
+                    <div><img src="./IMG/product.png" alt=""></div>
+                    <h2 data-i18n="promote_your_products">Promote your products</h2>
+                    <div data-i18n="lorem_short">There is a long-established fact that the readable content of a page
+                        will not be distracting</div>
+                </div>
+                <i class="fa-solid fa-arrow-left-long"></i>
+                <div class="column">
+                    <div><img src="./IMG/rating.png" alt=""></div>
+                    <h2 data-i18n="get_more_clients">Get more clients</h2>
+                    <div data-i18n="lorem_short">There is a long-established fact that the readable content of a page
+                        will not be distracting</div>
+                </div>
+            </div>
+        </section>
+        <section class="intersting column con">
+            <div class="font-large" data-i18n="are_interested_becoming">Are you interested in becoming</div>
+            <div data-i18n="member_our_community">member of our community</div>
+            <div class="btn-main">
+                <a href="#" data-i18n="join_us">Join US</a>
+            </div>
+        </section>
+        <section class="dont-Loss-Chance column con">
+            <div data-i18n="do_not_miss_opportunity">Don't miss this opportunity</div>
+            <div class="chance-Cards row">
+                <div class="column">
+                    <div><img src="./IMG/worldwide.png" alt=""></div>
+                    <div data-i18n="we_all_over_place">We are all over the place</div>
+                    <div data-i18n="we_160countries">We operate in more than 160 countries</div>
+                </div>
+                <div class="column">
+                    <div><img src="./IMG/infinity.png" alt=""></div>
+                    <div data-i18n="we_have_all">We have it all</div>
+                    <div data-i18n="from_shopping_design_communicating">From shopping to design, to communicating with
+                        factories and companies</div>
+                </div>
+                <div class="column">
+                    <div><img src="./IMG/all.png" alt=""></div>
+                    <div data-i18n="we_within_everyone_reach">We are within everyone's reach</div>
+                    <div data-i18n="We_start_from_5countries">We start services from 5 countries</div>
+                </div>
+                <div class="column">
+                    <div><img src="./IMG/device.png" alt=""></div>
+                    <div data-i18n="we_are_device">We are on any device</div>
+                    <div data-i18n="bring_traffic">Bring in traffic from the display network, mobile web, or app. We
+                        accept them all</div>
+                </div>
+                <div class="column">
+                    <div><img src="./IMG/rating2.png" alt=""></div>
+                    <div data-i18n="a_large_number_clients">A large number of clients</div>
+                    <div data-i18n="lorem_short">There is a long-established fact that the readable content of a page
+                        will not be distracting</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Customers-Evaluation column con">
+            <div>
+                <div class="font-large" data-i18n="customer_ratings">Customer ratings for Tamkeen services</div>
+                <div data-i18n="lorem_medium">There is a proven fact from a long time ago that the readable content of a
+                    page will not distract the reader from focusing on the external appearance of the text or the form
+                    of placement.</div>
+            </div>
+            <div class="background-world"><img src="./IMG/worldjpg.jpg" alt=""></div>
+
+            <div class="gallery">
+                <div class="shadow"></div>
+                <div class="swiper-container gallery-slider box-slide">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide">
+                            <div class="column">
+                                <div><i class="fa-solid fa-quote-right fa-2xl"></i></div>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div data-i18n="lorem_medium">There is a proven fact from a long time ago that the
+                                    readable
+                                    content of a page will not distract the reader from focusing on the external
+                                    appearance of
+                                    the text or the form of placement.</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="column ">
+                                <div><i class="fa-solid fa-quote-right fa-2xl"></i></div>
+                                <div class="starts">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div data-i18n="lorem_medium">There is a proven fact from a long time ago that the
+                                    readable
+                                    content of a page will not distract the reader from focusing on the external
+                                    appearance of
+                                    the text or the form of placement.</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="column ">
+                                <div><i class="fa-solid fa-quote-right fa-2xl"></i></div>
+                                <div class="starts">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div data-i18n="lorem_medium">There is a proven fact from a long time ago that the
+                                    readable
+                                    content of a page will not distract the reader from focusing on the external
+                                    appearance of
+                                    the text or the form of placement.</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="column ">
+                                <div><i class="fa-solid fa-quote-right fa-2xl"></i></div>
+                                <div class="starts">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div data-i18n="lorem_medium">There is a proven fact from a long time ago that the
+                                    readable
+                                    content of a page will not distract the reader from focusing on the external
+                                    appearance of
+                                    the text or the form of placement.</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="column">
+                                <div><i class="fa-solid fa-quote-right fa-2xl"></i></div>
+                                <div class="starts">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div data-i18n="lorem_medium">There is a proven fact from a long time ago that the
+                                    readable
+                                    content of a page will not distract the reader from focusing on the external
+                                    appearance of
+                                    the text or the form of placement.</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="column ">
+                                <div><i class="fa-solid fa-quote-right fa-2xl"></i></div>
+                                <div class="starts">
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div data-i18n="lorem_medium">There is a proven fact from a long time ago that the
+                                    readable
+                                    content of a page will not distract the reader from focusing on the external
+                                    appearance of
+                                    the text or the form of placement.</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="column">
+                                <div><i class="fa-solid fa-quote-right fa-2xl"></i></div>
+                                <div class="starts">
+                                    <i class="fa-solid fa-star active"></i>
+                                </div>
+                                <div data-i18n="lorem_medium">There is a proven fact from a long time ago that the
+                                    readable
+                                    content of a page will not distract the reader from focusing on the external
+                                    appearance of
+                                    the text or the form of placement.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="//into-the-program.com/demo/images/sample010.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="//into-the-program.com/demo/images/sample005.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="//into-the-program.com/demo/images/sample012.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="//into-the-program.com/demo/images/sample007.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="//into-the-program.com/demo/images/sample008.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="//into-the-program.com/demo/images/sample009.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="//into-the-program.com/demo/images/sample012.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer column con">
+            <div class="row">
+                <div class="column">
+                    <i class="fa-solid fa-phone row"></i>
+                    <div data-i18n="phone">Phone</div>
+                    <div style="direction: ltr;">
+                        00963 902 000 000
+                    </div>
+                </div>
+                <div class="column">
+                    <i class="fa-solid fa-envelope row"></i>
+                    <div data-i18n="email">Email</div>
+                    <div style="direction: ltr;">
+                        support@sample.net
+                    </div>
+                </div>
+                <div class="column">
+                    <i class="fa-solid fa-user-tie row"></i>
+                    <div data-i18n="support_Center">Support Center</div>
+                    <div style="direction: ltr;" data-i18n="contact">Contact us</div>
+                </div>
+                <div class="column">
+                    <i class="fa-solid fa-message row"></i>
+                    <div data-i18n="keep_touch">Keep in touch</div>
+                    <div data-i18n="submit_questions">Submit questions</div>
+                </div>
+            </div>
+            <div class="column">
+                <div data-i18n="subscribe_social_media">Subscribe to our social media page</div>
+                <div class="footer-social row">
+                    <i class="fa-brands fa-twitter row"></i>
+                    <i class="fa-brands fa-linkedin row"></i>
+                    <i class="fa-brands fa-google row"></i>
+                    <i class="fa-brands fa-instagram row"></i>
+                </div>
+            </div>
+            <div class="footer-links row">
+                <div class="column">
+                    <div data-i18n="categories">Categories</div>
+                    <ul class="column">
+                        <li><a href="#" data-i18n="graphic_design">Graphic Design</a></li>
+                        <li><a href="#" data-i18n="digital_marketing">Digital Marketing</a></li>
+                        <li><a href="#" data-i18n="writing_and_translation">Writing and Translation</a></li>
+                        <li><a href="#" data-i18n="video_animation">Video and animation</a></li>
+                        <li><a href="#" data-i18n="music_and_sound">Music and Sound</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                        <li><a href="#" data-i18n="data">Data</a></li>
+
+                    </ul>
+                </div>
+                <div class="column">
+                    <div data-i18n="about">About</div>
+                    <ul class="column">
+                        <li><a href="#" data-i18n="press_and_news">Press and News</a></li>
+                        <li><a href="#" data-i18n="partnership">Partnership</a></li>
+                        <li><a href="#" data-i18n="privacy_policy">Privacy Policy</a></li>
+                        <li><a href="#" data-i18n="terms_of_service">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div data-i18n="customer_support">Customer support</div>
+                    <ul class="column">
+                        <li><a href="#" data-i18n="instructions">Instructions</a></li>
+                        <li><a href="#" data-i18n="payment_option">Payment Option</a></li>
+                        <li><a href="#" data-i18n="booking_tips">Booking Tips</a></li>
+                        <li><a href="#" data-i18n="how_is_that_talk">How is that talk?</a></li>
+
+                    </ul>
+                </div>
+                <div class="column">
+                    <div data-i18n="information">information</div>
+                    <ul class="column">
+                        <li><a href="#" data-i18n="about">About</a></li>
+                        <li><a href="#" data-i18n="services">Services</a></li>
+                        <li><a href="#" data-i18n="online_inquiry">Online Inquiry</a></li>
+                        <li><a href="#" data-i18n="terms_and_conditions">Terms and Conditions</a></li>
+                        <li><a href="#" data-i18n="become_a_member">Become a Member</a></li>
+                        <li><a href="#" data-i18n="find_your_partners">Find your partners</a></li>
+                        <li><a href="#" data-i18n="start_earning">start_earning</a></li>
+
+                    </ul>
+                </div>
+                <div class="column">
+                    <div data-i18n="to_subscribe_mailing">To subscribe to the mailing list</div>
+                    <div class="column">
+                        <div data-i18n="you_will_receive_new">You will receive all that is new in our platform</div>
+                        <div class="subscribe row">
+                            <input type="text" data-i18n="What_service_do_you_search" placeholder="email" name="search">
+                            <button type="submit" data-i18n="subscription">Subscription</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row last-div">
+            <div data-i18n="Developed_by">Developed by</div> <span> Tamkeen </span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.0/swiper-bundle.js"
+        integrity="sha512-SrNsOUuhX4H9pjLo28/aWb4ZnBnxd/XzIo3NLvrDsmgtLhF8qD00M7gvLu0rqrjbr/Kv/I0I4O5oKRuxlovFWA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./JS/select.js" type="module"></script>
+    <script src="./JS/openANDclose.js"></script>
+    <script src="./JS/JS.js"></script>
+    <script>
+
+        var frame = document.querySelector('iframe');
+        var controls = document.querySelectorAll('.video-control');
+
+        var message = function (func) {
+            return JSON.stringify({
+                event: 'command',
+                func: func,
+                args: []
+            });
+        };
+
+        var execCommand = function (frame) {
+            return function (func) {
+                return function () {
+                    frame.contentWindow.postMessage(message(func), '*');
+                };
+            };
+        };
+
+        var frameCommand = execCommand(frame);
+
+        var configControl = function (vc) {
+            var func = vc.getAttribute('data-func');
+            var handler = frameCommand(func);
+            vc.tabIndex = 0;
+            vc.addEventListener('click', handler, false);
+        };
+
+        [].forEach.call(controls, configControl);
+
+
+    </script>
+</body>
+
+</html>

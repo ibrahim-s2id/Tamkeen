@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@200;400;700;1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="con wrapper-login">
+        <div class="cmdd row">
+            <div class="box-login">
+                <div class="row">
+                    <div class="font-large" id="signin">sign in</div>
+                    <div class="background-button"></div>
+                    <div class="font-large" id="signup">sign up</div>
+                </div>
+
+                <form class="column form-login active">
+                    <div class="form-group">
+                        <label for="user">
+                            Email:
+                        </label>
+                        <input type="email" name="email" id="email" required class="form-control">
+                        <small id="emailvalid" class="form-text text-muted invalid-feedback">
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">
+                            Password:
+                        </label>
+                        <input type="password" name="pass" id="passwordlogin" class="form-control">
+                        <h5 id="passchecklogin" style="color: red;">
+                            **Please Fill the password
+                        </h5>
+                    </div>
+
+                    <button type="submit" id="submitbtn" value="Submit" class="row">Submit</button>
+                </form>
+                <form class="column form-singup">
+                    <div class="form-group">
+                        <label for="user">
+                            Username:
+                        </label>
+                        <input type="text" name="username" id="usernames" class="form-control">
+                        <h5 id="usercheck" style="color: red;">
+                            **Username is missing
+                        </h5>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user">
+                            Email:
+                        </label>
+                        <input type="email" name="email" id="email" required class="form-control">
+                        <small id="emailvalid" class="form-text text-muted invalid-feedback">
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">
+                            Password:
+                        </label>
+                        <input type="password" name="pass" id="password" class="form-control">
+                        <h5 id="passcheck" style="color: red;">
+                            **Please Fill the password
+                        </h5>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conpassword">
+                            Confirm Password:
+                        </label>
+                        <input type="password" name="username" id="conpassword" class="form-control">
+                        <h5 id="conpasscheck" style="color: red;">
+                            **Password didn't match
+                        </h5>
+                    </div>
+
+                    <button type="submit" id="submitbtn" value="Submit" class="row">Submit</button>
+                </form>
+                <a href="./index.html" class="row">HOME</a>
+            </div>
+        </div>
+
+        <div class="row last-div">
+            <div data-i18n="Developed_by">Developed by</div> <span> Tamkeen </span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="./JS/select.js" type="module"></script>
+    <script src="./JS/openANDclose.js"></script>
+    <script src="./JS/JS.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#signin").click(function () {
+                $(".form-singup").css("display", "none");
+                $(".form-login").css("display", "block");
+                $(".box-login").css("height", "450");
+                $(".background-button").css({ "width": "50%", "right": "50%", "left": "0" });
+                console.log("hi")
+            });
+            $("#signup").click(function () {
+                $(".form-login").css("display", "none");
+                $(".form-singup").css("display", "block");
+                $(".box-login").css("height", "600");
+                $(".background-button").css({ "width": "50%", "left": "50%", "right": "0" });
+
+
+                console.log("bay")
+
+            });
+
+            // Validate Username
+            $("#usercheck").hide();
+            let usernameError = true;
+            $("#usernames").keyup(function () {
+                validateUsername();
+            });
+
+            function validateUsername() {
+                let usernameValue = $("#usernames").val();
+                if (usernameValue.length == "") {
+                    $("#usercheck").show();
+                    usernameError = false;
+                    return false;
+                } else if (usernameValue.length < 3 || usernameValue.length > 10) {
+                    $("#usercheck").show();
+                    $("#usercheck").html("**length of username must be between 3 and 10");
+                    usernameError = false;
+                    return false;
+                } else {
+                    $("#usercheck").hide();
+                }
+            }
+
+            // Validate Email
+            const email = document.getElementById("email");
+            email.addEventListener("blur", () => {
+                let regex =
+                    /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+                let s = email.value;
+                if (regex.test(s)) {
+                    email.classList.remove("is-invalid");
+                    emailError = true;
+                } else {
+                    email.classList.add("is-invalid");
+                    emailError = false;
+                }
+            });
+
+            // Validate Password
+            $("#passcheck").hide();
+            let passwordError = true;
+            $("#password").keyup(function () {
+                validatePassword();
+            });
+            function validatePassword() {
+                let passwordValue = $("#password").val();
+                if (passwordValue.length == "") {
+                    $("#passcheck").show();
+                    passwordError = false;
+                    return false;
+                }
+                if (passwordValue.length < 3 || passwordValue.length > 10) {
+                    $("#passcheck").show();
+                    $("#passcheck").html(
+                        "**length of your password must be between 3 and 10"
+                    );
+                    $("#passcheck").css("color", "red");
+                    passwordError = false;
+                    return false;
+                } else {
+                    $("#passcheck").hide();
+                }
+            }
+
+            $("#passchecklogin").hide();
+            let passwordError2 = true;
+            $("#passchecklogin").keyup(function () {
+                validatePassword();
+            });
+            function validatePassword() {
+                let passwordValue = $("#passwordlogin").val();
+                if (passwordValue.length == "") {
+                    $("#passchecklogin").show();
+                    passwordError2 = false;
+                    return false;
+                }
+                if (passwordValue.length < 3 || passwordValue.length > 10) {
+                    $("#passchecklogin").show();
+                    $("#passchecklogin").html(
+                        "**length of your password must be between 3 and 10"
+                    );
+                    $("#passchecklogin").css("color", "red");
+                    passwordError2 = false;
+                    return false;
+                } else {
+                    $("#passchecklogin").hide();
+                }
+            }
+            // Validate Confirm Password
+            $("#conpasscheck").hide();
+            let confirmPasswordError = true;
+            $("#conpassword").keyup(function () {
+                validateConfirmPassword();
+            });
+            function validateConfirmPassword() {
+                let confirmPasswordValue = $("#conpassword").val();
+                let passwordValue = $("#password").val();
+                if (passwordValue != confirmPasswordValue) {
+                    $("#conpasscheck").show();
+                    $("#conpasscheck").html("**Password didn't Match");
+                    $("#conpasscheck").css("color", "red");
+                    confirmPasswordError = false;
+                    return false;
+                } else {
+                    $("#conpasscheck").hide();
+                }
+            }
+
+            // Submit button
+            $("#submitbtn").click(function () {
+                validateUsername();
+                validatePassword();
+                validateConfirmPassword();
+                validateEmail();
+                if (
+                    usernameError == true &&
+                    passwordError == true &&
+                    confirmPasswordError == true &&
+                    emailError == true
+                ) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

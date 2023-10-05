@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@200;400;700;1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="con" style="overflow: hidden;">
+        <section class="header">
+            <div class="logo font-large row second-logo">
+                <div data-i18n="tamkeen" style="display: inline-flex;">Tamkeen</div><span
+                    style="font-size: 20px;">!</span>
+            </div>
+            <div class="wrapper-header">
+                <div class="first-row row con">
+                    <div class="first-row-left row">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="logo font-large row">
+                            <div data-i18n="tamkeen">Tamkeen</div><span>!</span>
+                        </div>
+                        <div>
+                            <form action="/action_page.php">
+                                <input type="text" data-i18n="What_service_do_you_search"
+                                    placeholder="ما الخدمة التي تريد البحث عنها؟" name="search">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <ul class="row">
+                            <li><a href="./index.html" data-i18n="home">Home</a></li>
+                            <li><a href="./courses.html" data-i18n="courses">Courses</a></li>
+                            <li><a href="#" data-i18n="specialization">Specialization</a></li>
+                            <li><a href="#" data-i18n="about">about</a></li>
+                            <li><a href="#" data-i18n="contact">contact</a></li>
+
+                        </ul>
+                    </div>
+                    <div class=" first-row-right row">
+                        <div class="row">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <i class="fa-solid fa-location-dot" style="margin-inline-end: 5px;"></i>
+                                    <span class="sBtn-text" data-i18n="syria">Syria</span>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text" value="syria" data-i18n="syria">Syria</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text" value="america" data-i18n="america">America</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text" value="lebanon" data-i18n="lebanon">Lebanon</span>
+                                    </li>
+                                    <li class="option">
+                                        <span class="option-text" value="UAE" data-i18n="UAE">UAE</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <i class="fa-solid fa-globe" style="margin-inline-end: 5px;"></i>
+                                    <span class="sBtn-text lan"></span>
+                                </div>
+                                <ul class="options">
+                                    <li class="option" id="arabi">
+                                        <span class="option-text" value="en" data-i18n="english">English</span>
+                                    </li>
+                                    <li class="option" id="engl">
+                                        <span class="option-text" value="ar" data-i18n="arabic">Arabic</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="./login.html" data-i18n="login">Login</a>
+                        </div>
+                        <div>
+                            <a href="#" class="btn-main" data-i18n="join">join</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="second-row con">
+                    <ul class="row">
+                        <li><a href="#" data-i18n="business">business</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                        <li><a href="#" data-i18n="video_animation">Video and animation</a></li>
+                        <li><a href="#" data-i18n="business">business</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                        <li><a href="#" data-i18n="video_animation">Video and animation</a></li>
+                        <li><a href="#" data-i18n="business">business</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                        <li><a href="#" data-i18n="video_animation">Video and animation</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-res">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        <div class="wrapper-business">
+            <!-- <div class="background-courses"><img src="./IMG/background-courses.jpg" alt=""></div> -->
+            <h1 class="font-large row" data-i18n="courses_now">courses now</h1>
+            <div class="card-course ccc row">
+                <a href="#">
+                    <div class="column">
+                        <div class="img-product"><img src="./IMG/Reactsvg.png" alt=""></div>
+                        <h1>course react</h1>
+                        <p>html , css , bootstrap</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="column">
+                        <div class="img-product"><img src="./IMG/laravel.png" alt=""></div>
+                        <h1>course laravel</h1>
+                        <p>html , css , bootstrap</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="column">
+                        <div class="img-product"><img src="./IMG/flutter.svg" alt=""></div>
+                        <h1>course flutter</h1>
+                        <p>html , css , bootstrap</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="column">
+                        <div class="img-product"><img src="./IMG/Vuejs.png" alt=""></div>
+                        <h1>course vue</h1>
+                        <p>html , css , bootstrap</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="column">
+                        <div class="img-product"><img src="./IMG/AngularJS.svg" alt=""></div>
+                        <h1>course angular</h1>
+                        <p>html , css , bootstrap</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="column">
+                        <div class="img-product"><img src="./IMG/Node.js.png" alt=""></div>
+                        <h1>course node.JS</h1>
+                        <p>html , css , bootstrap</p>
+                    </div>
+                </a>
+            </div>
+            <div class="statistical row">
+                <div>
+                    <div class="font-large" data-i18n="number_graduaters">number of graduates</div>
+                    <div class="font-large row">
+                        <span class="Count">1475</span>
+                        <span>+</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-large" data-i18n="number_trainees">Number of trainees</div>
+                    <div class="font-large row">
+                        <span class="Count">250</span>
+                        <span>+</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-large" data-i18n="number_employees">Number of Employees</div>
+                    <div class="font-large row">
+                        <span class="Count">1011</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="booking">
+            <div class="row">
+                <div class="book-img row">
+                    <img src="./IMG/Reactsvg.png" alt="">
+                </div>
+                <div class="clip">
+                    <img src="./IMG/Web.svg" alt="">
+                </div>
+                <div class="book-descrip column">
+                    <h1 class="font-large">frontend developer</h1>
+                </div>
+            </div>
+            <div class="column">
+                <div class="row">
+                    <h1 class="font-large" data-i18n="training_hours">Training hours</h1>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h1 class="" data-i18n="level_1">level 1</h1>
+                        <h3 data-i18n="hour_50">50 Hour</h3>
+                            <div>introduction</div>
+                            <div>html</div>
+                            <div>css</div>
+                            <div>ticks</div>
+                            <div>seo</div>
+                    </div>
+                    <div class="column">
+                        <h1 class="" data-i18n="level_2">level 2</h1>
+                        <h3 data-i18n="hour_50">50 Hour</h3>
+                            <div>javascript</div>
+                            <div>jquery</div>
+                            <div>bootstrap</div>
+                    </div>
+                    <div class="column">
+                        <h1 class="" data-i18n="level_3">level 3</h1>
+                        <h3 data-i18n="hour_50">50 Hour</h3>
+                            <div>intro react js</div>
+                            <div>structure fils</div>
+                            <div>hooks</div>
+                            <div>customize hooks</div>
+                            <div>react router</div>
+                    </div>
+                    <div class="column">
+                        <h1 class="" data-i18n="level_4">level 4</h1>
+                        <h3 data-i18n="hour_50">50 Hour</h3>
+                            <div>advance react js</div>
+                            <div>redux</div>
+                            <div>material ui</div>
+                            <div>react query</div>
+                            <div>big project</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <a id="motivate" class="cnnn btn-main" data-i18n="register_now">Register now</a>
+            </div>
+        </section>
+
+        <section class="footer column con">
+            <div class="row">
+                <div class="column">
+                    <i class="fa-solid fa-phone row"></i>
+                    <div data-i18n="phone">Phone</div>
+                    <div style="direction: ltr;">
+                        00963 902 000 000
+                    </div>
+                </div>
+                <div class="column">
+                    <i class="fa-solid fa-envelope row"></i>
+                    <div data-i18n="email">Email</div>
+                    <div style="direction: ltr;">
+                        support@sample.net
+                    </div>
+                </div>
+                <div class="column">
+                    <i class="fa-solid fa-user-tie row"></i>
+                    <div data-i18n="support_Center">Support Center</div>
+                    <div style="direction: ltr;" data-i18n="contact">Contact us</div>
+                </div>
+                <div class="column">
+                    <i class="fa-solid fa-message row"></i>
+                    <div data-i18n="keep_touch">Keep in touch</div>
+                    <div data-i18n="submit_questions">Submit questions</div>
+                </div>
+            </div>
+            <div class="column">
+                <div data-i18n="subscribe_social_media">Subscribe to our social media page</div>
+                <div class="footer-social row">
+                    <i class="fa-brands fa-twitter row"></i>
+                    <i class="fa-brands fa-linkedin row"></i>
+                    <i class="fa-brands fa-google row"></i>
+                    <i class="fa-brands fa-instagram row"></i>
+                </div>
+            </div>
+            <div class="footer-links row">
+                <div class="column">
+                    <div data-i18n="categories">Categories</div>
+                    <ul class="column">
+                        <li><a href="#" data-i18n="graphic_design">Graphic Design</a></li>
+                        <li><a href="#" data-i18n="digital_marketing">Digital Marketing</a></li>
+                        <li><a href="#" data-i18n="writing_and_translation">Writing and Translation</a></li>
+                        <li><a href="#" data-i18n="video_animation">Video and animation</a></li>
+                        <li><a href="#" data-i18n="music_and_sound">Music and Sound</a></li>
+                        <li><a href="#" data-i18n="programming_technology">Programming and technology</a></li>
+                        <li><a href="#" data-i18n="data">Data</a></li>
+
+                    </ul>
+                </div>
+                <div class="column">
+                    <div data-i18n="about">About</div>
+                    <ul class="column">
+                        <li><a href="#" data-i18n="press_and_news">Press and News</a></li>
+                        <li><a href="#" data-i18n="partnership">Partnership</a></li>
+                        <li><a href="#" data-i18n="privacy_policy">Privacy Policy</a></li>
+                        <li><a href="#" data-i18n="terms_of_service">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div data-i18n="customer_support">Customer support</div>
+                    <ul class="column">
+                        <li><a href="#" data-i18n="instructions">Instructions</a></li>
+                        <li><a href="#" data-i18n="payment_option">Payment Option</a></li>
+                        <li><a href="#" data-i18n="booking_tips">Booking Tips</a></li>
+                        <li><a href="#" data-i18n="how_is_that_talk">How is that talk?</a></li>
+
+                    </ul>
+                </div>
+                <div class="column">
+                    <div data-i18n="information">information</div>
+                    <ul class="column">
+                        <li><a href="#" data-i18n="about">About</a></li>
+                        <li><a href="#" data-i18n="services">Services</a></li>
+                        <li><a href="#" data-i18n="online_inquiry">Online Inquiry</a></li>
+                        <li><a href="#" data-i18n="terms_and_conditions">Terms and Conditions</a></li>
+                        <li><a href="#" data-i18n="become_a_member">Become a Member</a></li>
+                        <li><a href="#" data-i18n="find_your_partners">Find your partners</a></li>
+                        <li><a href="#" data-i18n="start_earning">start_earning</a></li>
+
+                    </ul>
+                </div>
+                <div class="column">
+                    <div data-i18n="to_subscribe_mailing">To subscribe to the mailing list</div>
+                    <div class="column">
+                        <div data-i18n="you_will_receive_new">You will receive all that is new in our platform</div>
+                        <div class="subscribe row">
+                            <input type="text" data-i18n="What_service_do_you_search" placeholder="email" name="search">
+                            <button type="submit" data-i18n="subscription">Subscription</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row last-div">
+            <div data-i18n="Developed_by">Developed by</div> <span> Tamkeen </span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="./JS/select.js" type="module"></script>
+    <script src="./JS/openANDclose.js"></script>
+    <script>
+
+    
+        $('.Count').each(function () {
+            var $this = $(this);
+            jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                duration: 1500,
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.ceil(this.Counter));
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
